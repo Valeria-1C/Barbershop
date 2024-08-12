@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Каталог" id="4">
+			<DataPath>Каталог</DataPath>
+			<ChoiceButton>true</ChoiceButton>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КаталогКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="КаталогРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="StartChoice">КаталогНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="ДатаВыгрузки" id="1">
+			<DataPath>ДатаВыгрузки</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаВыгрузкиКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДатаВыгрузкиРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ПорцияВыгрузки" id="9">
+			<DataPath>ПорцияВыгрузки</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ПорцияВыгрузкиКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ПорцияВыгрузкиРасширеннаяПодсказка" id="11"/>
+		</InputField>
+		<Button name="ВыгрузитьДанныеПолностью" id="7">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ВыгрузитьДанныеПолностью</CommandName>
+			<ExtendedTooltip name="ВыгрузитьДанныеПолностьюРасширеннаяПодсказка" id="8"/>
+		</Button>
+		<Button name="ВыгрузитьДанныеПоследовательно" id="12">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ВыгрузитьДанныеПоследовательно</CommandName>
+			<ExtendedTooltip name="ВыгрузитьДанныеПоследовательноРасширеннаяПодсказка" id="13"/>
+		</Button>
+		<Button name="ПрочитатьФайлПолностью" id="14">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПрочитатьФайлПолностью</CommandName>
+			<ExtendedTooltip name="ПрочитатьФайлПолностьюРасширеннаяПодсказка" id="15"/>
+		</Button>
+		<Button name="ПрочитатьФайлПоследовательно" id="16">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПрочитатьФайлПоследовательно</CommandName>
+			<ExtendedTooltip name="ПрочитатьФайлПоследовательноРасширеннаяПодсказка" id="17"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РаботаCТекстовымиФайлами</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДатаВыгрузки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Каталог" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПорцияВыгрузки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порция выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыгрузитьДанныеПолностью" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить данные полностью</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить данные полностью</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьДанныеПолностью</Action>
+		</Command>
+		<Command name="ВыгрузитьДанныеПоследовательно" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить данные последовательно</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить данные последовательно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьДанныеПоследовательно</Action>
+		</Command>
+		<Command name="ПрочитатьФайлПолностью" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать файл полностью</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать файл полностью</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрочитатьФайлПолностью</Action>
+		</Command>
+		<Command name="ПрочитатьФайлПоследовательно" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать файл последовательно</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать файл последовательно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрочитатьФайлПоследовательно</Action>
+		</Command>
+	</Commands>
+</Form>

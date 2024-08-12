@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+		xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:tns="http://practicum.yandex.ru"
+		xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsd1="http://practicum.yandex.ru"
+		name="goods"
+		targetNamespace="http://practicum.yandex.ru">
+	<types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:xs1="http://practicum.yandex.ru"
+				targetNamespace="http://practicum.yandex.ru"
+				attributeFormDefault="unqualified"
+				elementFormDefault="qualified">
+			<xs:complexType name="Номенклатура">
+				<xs:sequence>
+					<xs:element name="Артикул"
+							type="xs:string"/>
+					<xs:element name="ТипНоменклатуры"
+							type="xsd1:ТипНоменклатуры"
+							nillable="true"/>
+					<xs:element name="СтатьяЗатрат"
+							type="xsd1:СтатьяЗатрат"
+							nillable="true"/>
+					<xs:element name="Наименование"
+							type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ТипНоменклатуры">
+				<xs:sequence>
+					<xs:element name="Наименование"
+							type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="СтатьяЗатрат">
+				<xs:sequence>
+					<xs:element name="Наименование"
+							type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="СписокНоменклатуры">
+				<xs:sequence>
+					<xs:element name="Номенклатура"
+							type="xsd1:Номенклатура"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="get">
+				<xs:complexType>
+					<xs:sequence/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xsd1:СписокНоменклатуры"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</types>
+	<message name="getRequestMessage">
+		<part name="parameters"
+				element="tns:get"/>
+	</message>
+	<message name="getResponseMessage">
+		<part name="parameters"
+				element="tns:getResponse"/>
+	</message>
+	<portType name="goodsPortType">
+		<operation name="get">
+			<input name="getRequest"
+					message="tns:getRequestMessage"/>
+			<output name="getResponse"
+					message="tns:getResponseMessage"/>
+		</operation>
+	</portType>
+	<binding name="goodsSoapBinding"
+			type="tns:goodsPortType">
+		<soapbind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="get">
+			<soapbind:operation style="document"
+					soapAction="http://practicum.yandex.ru#goods:get"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<binding name="goodsSoap12Binding"
+			type="tns:goodsPortType">
+		<soap12bind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="get">
+			<soap12bind:operation style="document"
+					soapAction="http://practicum.yandex.ru#goods:get"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="goods">
+		<port name="goodsSoap"
+				binding="tns:goodsSoapBinding">
+			<documentation> 
+				<wsi:Claim xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/"
+						conformsTo="http://ws-i.org/profiles/basic/1.1"/>
+			</documentation>
+			<soapbind:address location="http://localhost/barber/ws/goods.1cws"/>
+		</port>
+		<port name="goodsSoap12"
+				binding="tns:goodsSoap12Binding">
+			<soap12bind:address location="http://localhost/barber/ws/goods.1cws"/>
+		</port>
+	</service>
+</definitions>

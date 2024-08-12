@@ -1,0 +1,17 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://practicum.yandex.ru">
+	<objectType name="Номенклатура">
+		<property name="Артикул" type="xs:string"/>
+		<property xmlns:d3p1="http://practicum.yandex.ru" name="ТипНоменклатуры" type="d3p1:ТипНоменклатуры" nillable="true"/>
+		<property xmlns:d3p1="http://practicum.yandex.ru" name="СтатьяЗатрат" type="d3p1:СтатьяЗатрат" nillable="true"/>
+		<property name="Наименование" type="xs:string"/>
+	</objectType>
+	<objectType name="ТипНоменклатуры">
+		<property name="Наименование" type="xs:string"/>
+	</objectType>
+	<objectType name="СтатьяЗатрат">
+		<property name="Наименование" type="xs:string"/>
+	</objectType>
+	<objectType name="СписокНоменклатуры">
+		<property xmlns:d3p1="http://practicum.yandex.ru" name="Номенклатура" type="d3p1:Номенклатура" upperBound="-1"/>
+	</objectType>
+</package>

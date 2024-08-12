@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.Покупки</Subsystem>
+		<Subsystem>Subsystem.Продажи</Subsystem>
+		<Subsystem>Subsystem.Персонал</Subsystem>
+		<Subsystem>Subsystem.Настройки</Subsystem>
+		<Subsystem>Subsystem.НСИИАдминистрирование</Subsystem>
+		<Subsystem>11d0b4ec-7120-47a3-8b25-5fbd938b7266</Subsystem>
+		<Subsystem>23e136a4-3ed2-4554-86b9-bd8bc9c2a7f8</Subsystem>
+		<Subsystem>31bb10dd-9b78-47b5-aa64-a2d0c9903c31</Subsystem>
+		<Subsystem>393055e5-fe07-4e9c-a769-401b46ab90b2</Subsystem>
+		<Subsystem>64e3db50-42a8-4738-861f-6bd2cc10f7ad</Subsystem>
+		<Subsystem>d7309ab0-509d-42cc-b474-7106c1d51354</Subsystem>
+	</SubsystemsOrder>
+</CommandInterface>

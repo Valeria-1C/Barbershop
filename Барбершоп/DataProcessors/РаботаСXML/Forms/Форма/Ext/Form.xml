@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="ДатаВыгрузки" id="4">
+			<DataPath>ДатаВыгрузки</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаВыгрузкиКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаВыгрузкиРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Каталог" id="1">
+			<DataPath>Каталог</DataPath>
+			<ChoiceButton>true</ChoiceButton>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КаталогКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КаталогРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Реквизит" id="13">
+			<DataPath>Реквизит</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="РеквизитКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="РеквизитРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<Button name="ЗаписатьВXMLПоследовательно" id="7">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ЗаписатьВXMLПоследовательно</CommandName>
+			<ExtendedTooltip name="ЗаписатьВXMLПоследовательноРасширеннаяПодсказка" id="8"/>
+		</Button>
+		<Button name="ПрочитатьИзXMLПоследовательно" id="9">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПрочитатьИзXMLПоследовательно</CommandName>
+			<ExtendedTooltip name="ПрочитатьИзXMLПоследовательноРасширеннаяПодсказка" id="10"/>
+		</Button>
+		<Button name="ПрочитатьЧерезDOM" id="11">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПрочитатьЧерезDOM</CommandName>
+			<ExtendedTooltip name="ПрочитатьЧерезDOMРасширеннаяПодсказка" id="12"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РаботаСXML</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Каталог" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаВыгрузки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Реквизит" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.РеализацияТоваровИУслуг</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьВXMLПоследовательно" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать в XML последовательно</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать ВXMLПоследовательно</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+		<Command name="ПрочитатьИзXMLПоследовательно" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать из XMLПоследовательно</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать из XMLПоследовательно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрочитатьИзXMLПоследовательно</Action>
+		</Command>
+		<Command name="ПрочитатьЧерезDOM" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать через DOM</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать через DOM</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрочитатьЧерезDOM</Action>
+		</Command>
+		<Command name="Сериализация" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сериализация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сериализация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сериализация</Action>
+		</Command>
+	</Commands>
+</Form>

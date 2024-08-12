@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаРаботаСКоллекциямиЗначений" id="1">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.РаботаСКоллекциямиЗначений</CommandName>
+				<ExtendedTooltip name="ФормаРаботаСКоллекциямиЗначенийРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаРаботаСоСпискомЗначений" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.РаботаСоСпискомЗначений</CommandName>
+				<ExtendedTooltip name="ФормаРаботаСоСпискомЗначенийРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="ФормаРаботаСоСтруктурамиИСоответствиями" id="5">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.РаботаСоСтруктурамиИСоответствиями</CommandName>
+				<ExtendedTooltip name="ФормаРаботаСоСтруктурамиИСоответствиямиРасширеннаяПодсказка" id="6"/>
+			</Button>
+			<Button name="ФормаРаботаСПроцедурамиИФункциями" id="7">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.РаботаСПроцедурамиИФункциями</CommandName>
+				<ExtendedTooltip name="ФормаРаботаСПроцедурамиИФункциямиРасширеннаяПодсказка" id="8"/>
+			</Button>
+			<Button name="ВводПоложительногоЧисла" id="9">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВводПоложительногоЧисла</CommandName>
+				<ExtendedTooltip name="ВводПоложительногоЧислаРасширеннаяПодсказка" id="10"/>
+			</Button>
+			<Button name="ПосмотретьСтруктуруХраненияТаблицСУБД" id="11">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПосмотретьСтруктуруХраненияТаблицСУБД</CommandName>
+				<ExtendedTooltip name="ПосмотретьСтруктуруХраненияТаблицСУБДРасширеннаяПодсказка" id="12"/>
+			</Button>
+			<Button name="ОбходГруппировокЗапроса" id="13">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОбходГруппировокЗапроса</CommandName>
+				<ExtendedTooltip name="ОбходГруппировокЗапросаРасширеннаяПодсказка" id="14"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ОсновыПрограммирования</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="РаботаСКоллекциямиЗначений" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работу с массивами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа с коллекциями значений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РаботаСКоллекциямиЗначений</Action>
+		</Command>
+		<Command name="РаботаСоСпискомЗначений" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа со списком значений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа со списком значений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РаботаСоСпискомЗначений</Action>
+		</Command>
+		<Command name="РаботаСоСтруктурамиИСоответствиями" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа со структурами и соответствиями</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа со структурами и соответствиями</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РаботаСоСтруктурамиИСоответствиями</Action>
+		</Command>
+		<Command name="РаботаСПроцедурамиИФункциями" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа с процедурами и функциями</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа с процедурами и функциями</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РаботаСПроцедурамиИФункциями</Action>
+		</Command>
+		<Command name="ВводПоложительногоЧисла" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввод положительного числа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввод положительного числа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВводПоложительногоЧисла</Action>
+		</Command>
+		<Command name="ПосмотретьСтруктуруХраненияТаблицСУБД" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Посмотреть структуру хранения таблиц СУБД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Посмотреть структуру хранения таблиц СУБД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПосмотретьСтруктуруХраненияТаблицСУБД1</Action>
+		</Command>
+		<Command name="ОбходГруппировокЗапроса" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обход группировок запроса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обход группировок запроса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбходГруппировокЗапроса</Action>
+		</Command>
+	</Commands>
+</Form>
